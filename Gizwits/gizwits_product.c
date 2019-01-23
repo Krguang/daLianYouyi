@@ -374,7 +374,7 @@ void userHandle(void)
 	currentDataPoint.valueAHU301_reShuiFaKaiDu = localArray[5];
 	currentDataPoint.valueAHU301_xinFengWenDU = localArray[6];
 	currentDataPoint.valueAHU301_jiaShiQIKaiDu = localArray[7];
-	currentDataPoint.valueAHU301_beiYong = localArray[29];
+	//currentDataPoint.valueAHU301_beiYong = localArray[29];	//这个位改为机组数量
 	currentDataPoint.valueAHU302_tempReal = localArray[30];
 	currentDataPoint.valueAHU302_humiReal = localArray[31];
 	currentDataPoint.valueAHU302_tempSet = localArray[32];
@@ -497,7 +497,7 @@ void userHandle(void)
 void userInit(void)
 {
     memset((uint8_t*)&currentDataPoint, 0, sizeof(dataPoint_t));
-    
+	currentDataPoint.valueAHU301_beiYong = 13;
 }
 
 
